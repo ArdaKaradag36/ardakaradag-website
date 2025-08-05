@@ -1,0 +1,245 @@
+/* === Temel Sayfa Yapısı === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* === Header ve Menü === */
+header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px 0 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.aktif {
+  color: #ffa500;
+}
+
+/* === Ana İçerik Alanı === */
+main {
+  flex: 1;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* === Projelerim Kutuları === */
+.project-group {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-group:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.project-group h3 {
+  margin-top: 0;
+  color: #222;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.project-group ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.project-group li {
+  margin-bottom: 8px;
+}
+
+.project-group a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.project-group a:hover {
+  text-decoration: underline;
+}
+
+/* === Giriş Sayfası (index.html) === */
+.giris {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.profil-img {
+  width: 180px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.giris p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+
+.alinti {
+  margin-top: 30px;
+  font-style: italic;
+  color: #555;
+}
+
+.not {
+  margin-top: 10px;
+  color: #777;
+}
+
+/* === Hakkımda Sayfası === */
+.hakkimda {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  line-height: 1.7;
+}
+
+.hakkimda h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #222;
+}
+
+.hakkimda p {
+  margin-bottom: 20px;
+  font-size: 17px;
+  text-align: justify;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  margin-top: 40px;
+}
+
+/* === Responsive Uyum === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .giris, .hakkimda {
+    padding: 30px 15px;
+  }
+
+  .profil-img {
+    width: 140px;
+  }
+
+  .hakkimda h2 {
+    font-size: 24px;
+  }
+
+  .hakkimda p, .giris p {
+    font-size: 16px;
+  }
+
+  .project-group {
+    padding: 20px 15px;
+  }
+}
+
+/* === İletişim Sayfası === */
+.iletisim-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.iletisim-container img {
+  max-width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.iletisim-bilgi {
+  flex: 1;
+  min-width: 280px;
+}
+
+.iletisim-bilgi ul {
+  list-style: none;
+  padding: 0;
+}
+
+.iletisim-bilgi li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.iletisim-bilgi a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.iletisim-bilgi a:hover {
+  text-decoration: underline;
+}
+
+.tanitim-yazisi {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
